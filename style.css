@@ -1,0 +1,302 @@
+:root {
+  --lino: #FBF6EF;
+  --frambuesa: #D97BA0;
+  --salvia: #A8C3A0;
+  --manteca: #F2C879;
+  --cacao: #6B4A3E;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background-color: var(--lino);
+  color: var(--cacao);
+  line-height: 1.5;
+}
+
+h1, h2, h3 {
+  font-family: 'Baloo 2', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header {
+  padding: 1.5rem 2rem;
+  background-color: var(--lino);
+}
+
+.header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.header-top h1 {
+  font-size: 1.8rem;
+  color: var(--frambuesa);
+}
+
+.logo {
+  width: clamp(72px, 8vw, 110px);
+  height: clamp(72px, 8vw, 110px);
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+nav .nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem 1.5rem;
+  font-weight: 600;
+}
+
+nav .nav-links li {
+  white-space: nowrap;
+}
+
+nav .nav-links a:hover {
+  color: var(--frambuesa);
+}
+
+#inicio {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 3rem 2rem;
+}
+
+.hero-texto {
+  flex: 1 1 320px;
+}
+
+.eyebrow {
+  color: var(--manteca);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-texto h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: var(--cacao);
+  margin-bottom: 1rem;
+}
+
+.hero-descripcion {
+  max-width: 40ch;
+  margin-bottom: 1.5rem;
+}
+
+.boton-principal {
+  display: inline-block;
+  background-color: var(--frambuesa);
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem 2rem;
+  border-radius: 999px;
+}
+
+.hero-imagen {
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-imagen img {
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 63% 37% 54% 46% / 45% 41% 59% 55%;
+}
+
+#catalogo {
+  padding: 3rem 2rem;
+}
+
+#catalogo h2 {
+  text-align: center;
+  color: var(--frambuesa);
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 2.5rem 1.5rem;
+}
+
+.tarjeta-producto {
+  position: relative;
+  background-color: white;
+  border-radius: 1.2rem;
+  padding: 1rem 1rem 1.5rem;
+  box-shadow: 0 8px 20px rgba(107, 74, 62, 0.08);
+  text-align: center;
+}
+
+.tarjeta-producto img {
+  border-radius: 0.8rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-bottom: 1.4rem;
+}
+
+.tarjeta-producto .etiqueta {
+  position: absolute;
+  top: -0.6rem;
+  right: 0.8rem;
+  background-color: var(--manteca);
+  color: var(--cacao);
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.4rem;
+  transform: rotate(6deg);
+}
+
+.tarjeta-producto .etiqueta::before {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  right: 1.2rem;
+  width: 1px;
+  height: 0.6rem;
+  background-color: var(--cacao);
+}
+
+.tarjeta-producto .precio {
+  font-weight: 800;
+  color: var(--salvia);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.boton-comprar {
+  display: inline-block;
+  background-color: #25D366;
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 0.55rem 1.4rem;
+  border-radius: 999px;
+}
+
+#sobre-mi {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: white;
+}
+
+.sobre-texto {
+  max-width: 65ch;
+  margin: 0 auto;
+}
+
+.sobre-texto .eyebrow {
+  text-align: center;
+}
+
+.sobre-texto h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 1rem;
+}
+
+.sobre-texto p {
+  margin-bottom: 1rem;
+}
+
+#contacto {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+#contacto .eyebrow {
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin-bottom: 0.8rem;
+}
+
+.contacto-descripcion {
+  max-width: 45ch;
+  margin: 0 auto 2rem;
+}
+
+.contacto-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.boton-contacto {
+  display: inline-block;
+  font-weight: 700;
+  padding: 0.9rem 2.2rem;
+  border-radius: 999px;
+  color: white;
+}
+
+.boton-contacto.whatsapp {
+  background-color: #25D366;
+}
+
+.boton-contacto.instagram {
+  background-color: var(--frambuesa);
+}
+
+footer {
+  background-color: var(--cacao);
+  color: var(--lino);
+  text-align: center;
+  padding: 2.5rem 2rem;
+}
+
+.footer-marca {
+  font-family: 'Baloo 2', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer-links a:hover {
+  color: var(--manteca);
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
